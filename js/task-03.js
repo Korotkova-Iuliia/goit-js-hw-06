@@ -14,15 +14,26 @@ const images = [
 ];
 
 const imgGalleryEl = document.querySelector('ul.gallery');
-console.log(imgGalleryEl);
+// console.log(imgGalleryEl);
 const elementsGallery = images
   .map(
     (image) =>
-      `<li><img src="${image.url}" alt="${image.alt}"/>
-</li>`
+      `<li><img class="image" src="${image.url}" alt="${image.alt}" width = "500" /></li>`
   )
   .join('');
 
-console.log(elementsGallery);
-
 imgGalleryEl.insertAdjacentHTML('beforeend', elementsGallery);
+console.log(imgGalleryEl);
+const styleImagesEl = document.querySelectorAll('.image');
+console.log(styleImagesEl);
+styleImagesEl.forEach((styleImageEl) => {
+  styleImageEl.style.textDecoration = 'none';
+  styleImageEl.style.listStile = 'none';
+  styleImageEl.style.display = 'inline-block';
+  styleImageEl.style.display = 'flexBox';
+  styleImageEl.style.padding = '5px';
+  styleImageEl.style.marging = '5px';
+  styleImageEl.style.backgroundColor = 'tomato';
+  styleImageEl.style.borderRadius = '50px';
+});
+//  background-color: black;
