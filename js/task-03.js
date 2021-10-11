@@ -27,13 +27,15 @@ console.log(imgGalleryEl);
 const styleImagesEl = document.querySelectorAll('.image');
 console.log(styleImagesEl);
 styleImagesEl.forEach((styleImageEl) => {
-  styleImageEl.style.textDecoration = 'none';
-  styleImageEl.style.listStile = 'none';
   styleImageEl.style.display = 'inline-block';
   styleImageEl.style.display = 'flexBox';
   styleImageEl.style.padding = '5px';
   styleImageEl.style.marging = '5px';
-  styleImageEl.style.backgroundColor = 'tomato';
-  styleImageEl.style.borderRadius = '50px';
+  styleImageEl.style.borderRadius = '150px';
+  styleImageEl.style.backgroundColor = prompt(
+    'type for each picture: tomato or green or purple',
+    'tomato',
+    'green',
+    'purple'
+  );
 });
-//  background-color: black;
