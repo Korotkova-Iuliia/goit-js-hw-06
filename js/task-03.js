@@ -15,16 +15,14 @@ const images = [
 
 const imgGalleryEl = document.querySelector('ul.gallery');
 console.log(imgGalleryEl);
-const elementsGallery = images.map((data) => {
-  const itemEl = document.createElement('li');
-  console.log(itemEl);
+const elementsGallery = images
+  .map(
+    (image) =>
+      `<li><img src="${image.url}" alt="${image.alt}"/>
+</li>`
+  )
+  .join('');
 
-  const imageEl = document.createElement('img');
-  // console.log(imageEl);
-  itemEl.append(imageEl);
-  imgGalleryEl.append(itemEl);
-});
-// const image = document.querySelector('.image');
-// console.log(image.src);
-// image.url = 'https://placeimg.com/640/480/tech';
-// insertAdjacentHTML();
+console.log(elementsGallery);
+
+imgGalleryEl.insertAdjacentHTML('beforeend', elementsGallery);
