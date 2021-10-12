@@ -27,13 +27,13 @@ console.log(imgGalleryEl);
 const styleImagesEl = document.querySelectorAll('.image');
 console.log(styleImagesEl);
 styleImagesEl.forEach((styleImageEl) => {
-  styleImageEl.style.display = 'inline-block';
+  styleImageEl.style.display = 'inline-flex';
   styleImageEl.style.display = 'flexBox';
   styleImageEl.style.padding = '5px';
   styleImageEl.style.marging = '5px';
   styleImageEl.style.borderRadius = '150px';
   styleImageEl.style.backgroundColor = prompt(
-    'type for each picture: tomato or green or purple',
+    'type for each picture: or tomato or green or purple',
     'tomato',
     'green',
     'purple'
