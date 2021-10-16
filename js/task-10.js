@@ -25,14 +25,17 @@ function onInput(event) {
   createBtn.addEventListener('click', onCreateBtnClick);
   function onCreateBtnClick(event) {
     const shapeEl = document.createElement('div');
+    boxesContainer.append(shapeEl);
+
     shapeEl.style.backgroundColor = getRandomHexColor();
+
     shapeEl.style.width = '30px';
     shapeEl.style.height = '30px';
     console.log(shapeEl);
-    boxesContainer.append(shapeEl);
+
     console.log(event);
-    inputBtn.reset();
-    createBtn.reset();
+    event.currentTarget.value = '';
+    console.log((event.currentTarget.value = ''));
   }
 }
 
