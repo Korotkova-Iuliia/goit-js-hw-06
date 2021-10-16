@@ -12,6 +12,7 @@ const inputBtn = controlsContainer.firstElementChild;
 console.log(inputBtn);
 const boxesContainer = document.querySelector('#boxes');
 console.log(boxesContainer);
+console.log(document.createElement('div'));
 
 inputBtn.addEventListener('input', onIcreateBtnInput);
 function onIcreateBtnInput(event) {
