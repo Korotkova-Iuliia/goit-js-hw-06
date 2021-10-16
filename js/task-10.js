@@ -12,20 +12,38 @@ const inputBtn = controlsContainer.firstElementChild;
 console.log(inputBtn);
 const boxesContainer = document.querySelector('#boxes');
 console.log(boxesContainer);
-console.log(document.createElement('div'));
 
-inputBtn.addEventListener('input', onIcreateBtnInput);
-function onIcreateBtnInput(event) {
+// const boxesContainer = {};
+// formData.forEach((value, name) => {
+//   userData[name] = value;
+// });
+
+inputBtn.addEventListener('input', onInput);
+function onInput(event) {
   console.log(Number(event.currentTarget.value));
 
-  // if (event.currentTarget.value.length === inputDataLengthEl) {
-  //   return event.currentTarget.classList.add('valid');
-  // }
-
-  // console.log(inputDataLengthEl);
-  // event.currentTarget.classList.add('invalid');
-  //    console.log(event.currentTarget.value.length);
+  createBtn.addEventListener('click', onCreateBtnClick);
+  function onCreateBtnClick(event) {
+    const shapeEl = document.createElement('div');
+    shapeEl.style.backgroundColor = getRandomHexColor();
+    shapeEl.style.width = '30px';
+    shapeEl.style.height = '30px';
+    console.log(shapeEl);
+    boxesContainer.append(shapeEl);
+    console.log(event);
+    inputBtn.reset();
+    createBtn.reset();
+  }
 }
+
+// if (event.currentTarget.value.length === inputDataLengthEl) {
+//   return event.currentTarget.classList.add('valid');
+// }
+
+// console.log(inputDataLengthEl);
+// event.currentTarget.classList.add('invalid');
+//    console.log(event.currentTarget.value.length);
+
 // const dishes = document.querySelectorAll('.dishes > li');
 // dishes.forEach((dish) => {
 //   console.log(dish.dataset.id);
