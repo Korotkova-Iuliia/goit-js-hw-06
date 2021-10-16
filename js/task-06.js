@@ -7,7 +7,7 @@ function onInputBtnBlur(event) {
   if (event.currentTarget.value.length === inputDataLengthEl) {
     return event.currentTarget.classList.add('valid');
   }
-  console.log(inputDataLengthEl);
+  // console.log(inputDataLengthEl);
   event.currentTarget.classList.add('invalid');
   //    console.log(event.currentTarget.value.length);
 }

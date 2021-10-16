@@ -23,19 +23,20 @@ const elementsGallery = images
   .join('');
 
 imgGalleryEl.insertAdjacentHTML('beforeend', elementsGallery);
-console.log(imgGalleryEl);
+// console.log(imgGalleryEl);
 const styleImagesEl = document.querySelectorAll('.image');
-console.log(styleImagesEl);
-styleImagesEl.forEach((styleImageEl) => {
-  styleImageEl.style.display = 'inline-flex';
-  styleImageEl.style.display = 'flexBox';
-  styleImageEl.style.padding = '5px';
-  styleImageEl.style.marging = '5px';
-  styleImageEl.style.borderRadius = '150px';
-  styleImageEl.style.backgroundColor = prompt(
-    'type for each picture: or tomato or green or purple',
-    'tomato',
-    'green',
-    'purple'
-  );
-});
+// console.log(styleImagesEl);
+// styleImageEl.style.display = 'flexBox';
+// styleImagesEl.forEach((styleImageEl) => {
+//   styleImageEl.style.display = 'inline-flex';
+//   styleImageEl.style.display = 'flexBox';
+//   styleImageEl.style.padding = '5px';
+//   styleImageEl.style.marging = '5px';
+//   styleImageEl.style.borderRadius = '150px';
+//   styleImageEl.style.backgroundColor = prompt(
+//     'type for each picture: or tomato or green or purple',
+//     'tomato',
+//     'green',
+//     'purple'
+//   );
+// });
