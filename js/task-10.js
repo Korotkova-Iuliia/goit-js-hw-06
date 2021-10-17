@@ -19,23 +19,22 @@ console.log(boxesContainer);
 // });
 
 inputBtn.addEventListener('input', onInput);
+
 function onInput(event) {
   console.log(Number(event.currentTarget.value));
-
   createBtn.addEventListener('click', onCreateBtnClick);
   function onCreateBtnClick(event) {
     const shapeEl = document.createElement('div');
-    boxesContainer.append(shapeEl);
-
     shapeEl.style.backgroundColor = getRandomHexColor();
-
     shapeEl.style.width = '30px';
     shapeEl.style.height = '30px';
     console.log(shapeEl);
 
     console.log(event);
-    event.currentTarget.value = '';
-    console.log((event.currentTarget.value = ''));
+    // event.currentTarget.value = '';
+    // console.log((event.currentTarget.value = ''));
+    boxesContainer.appendChild(shapeEl);
+    // inputBtn.reset();
   }
 }
 

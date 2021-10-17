@@ -24,7 +24,12 @@ button {
 }
 ul {
   list-style: none;
+  display: flex;
 }
 .image {
-  display: block;
+  margin: 15px;
+  padding: 5px;
+  border-radius: 150px;
+  background-color: coral;
+  border: 15px;
 }

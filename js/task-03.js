@@ -18,7 +18,7 @@ const imgGalleryEl = document.querySelector('ul.gallery');
 const elementsGallery = images
   .map(
     (image) =>
-      `<li><img class="image" src="${image.url}" alt="${image.alt}" width = "500" /></li>`
+      `<li><img class="image" src="${image.url}" alt="${image.alt}" height = "300" /></li>`
   )
   .join('');
 
@@ -27,16 +27,16 @@ imgGalleryEl.insertAdjacentHTML('beforeend', elementsGallery);
 const styleImagesEl = document.querySelectorAll('.image');
 // console.log(styleImagesEl);
 // styleImageEl.style.display = 'flexBox';
-// styleImagesEl.forEach((styleImageEl) => {
-//   styleImageEl.style.display = 'inline-flex';
-//   styleImageEl.style.display = 'flexBox';
-//   styleImageEl.style.padding = '5px';
-//   styleImageEl.style.marging = '5px';
-//   styleImageEl.style.borderRadius = '150px';
-//   styleImageEl.style.backgroundColor = prompt(
-//     'type for each picture: or tomato or green or purple',
-//     'tomato',
-//     'green',
-//     'purple'
-//   );
-// });
+styleImagesEl.forEach((styleImageEl) => {
+  //   styleImageEl.style.display = 'inline-flex';
+  //   styleImageEl.style.display = 'flexBox';
+  //   styleImageEl.style.padding = '5px';
+  //   styleImageEl.style.marging = '5px';
+  //   styleImageEl.style.borderRadius = '150px';
+  styleImageEl.style.backgroundColor = prompt(
+    'type for each picture: or tomato or green or purple',
+    'tomato',
+    'green',
+    'purple'
+  );
+});
