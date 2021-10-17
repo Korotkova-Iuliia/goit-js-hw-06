@@ -24,7 +24,7 @@ button {
 }
 ul {
   list-style: none;
-  display: flex;
+  display: block;
 }
 .image {
   margin: 15px;

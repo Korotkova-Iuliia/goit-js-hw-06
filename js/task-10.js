@@ -13,7 +13,6 @@ console.log(inputBtn);
 const boxesContainer = document.querySelector('#boxes');
 console.log(boxesContainer);
 
-// const boxesContainer = {};
 // formData.forEach((value, name) => {
 //   userData[name] = value;
 // });
@@ -23,18 +22,28 @@ inputBtn.addEventListener('input', onInput);
 function onInput(event) {
   console.log(Number(event.currentTarget.value));
   createBtn.addEventListener('click', onCreateBtnClick);
+
   function onCreateBtnClick(event) {
+    // for (let boxCounter)
     const shapeEl = document.createElement('div');
+    shapeEl.length = Number(event.currentTarget.value);
+    const boxes = {};
+    // boxes.push(shapeEl);
+    // let total = 0;
+
     shapeEl.style.backgroundColor = getRandomHexColor();
     shapeEl.style.width = '30px';
     shapeEl.style.height = '30px';
     console.log(shapeEl);
 
     console.log(event);
+    // inputBtn.textContent = '';
     // event.currentTarget.value = '';
     // console.log((event.currentTarget.value = ''));
     boxesContainer.appendChild(shapeEl);
-    // inputBtn.reset();
+    inputBtn.value = '';
+
+    return;
   }
 }
 
