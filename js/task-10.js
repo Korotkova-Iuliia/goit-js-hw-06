@@ -3,67 +3,46 @@ function getRandomHexColor() {
 }
 
 const createBtn = document.querySelector('button[data-create]');
-console.log(createBtn);
+// console.log(createBtn);
 const destroyBtn = document.querySelector('button[data-destroy]');
-console.log(destroyBtn);
+// console.log(destroyBtn);
 const controlsContainer = document.querySelector('#controls');
-console.log(controlsContainer);
+// console.log(controlsContainer);
 const inputBtn = controlsContainer.firstElementChild;
-console.log(inputBtn);
+// console.log(inputBtn);
 const boxesContainer = document.querySelector('#boxes');
 console.log(boxesContainer);
 
-// formData.forEach((value, name) => {
-//   userData[name] = value;
-// });
+const boxes = boxesContainer.children;
+console.log(boxes);
 
-inputBtn.addEventListener('input', onInput);
-
-function onInput(event) {
-  console.log(Number(event.currentTarget.value));
-  createBtn.addEventListener('click', onCreateBtnClick);
-
-  function onCreateBtnClick(event) {
-    // for (let boxCounter)
-    const shapeEl = document.createElement('div');
-    shapeEl.length = Number(event.currentTarget.value);
-    const boxes = {};
-    // boxes.push(shapeEl);
-    // let total = 0;
-
-    shapeEl.style.backgroundColor = getRandomHexColor();
-    shapeEl.style.width = '30px';
-    shapeEl.style.height = '30px';
-    console.log(shapeEl);
-
-    console.log(event);
-    // inputBtn.textContent = '';
-    // event.currentTarget.value = '';
-    // console.log((event.currentTarget.value = ''));
-    boxesContainer.appendChild(shapeEl);
-    inputBtn.value = '';
+function getSize() {
+  for (let i = 0; i < boxes.length; i++) {
+    let sizeBoxes;
+    sizeBoxes = `${Math.floor(30 + indexOf(boxes) * 10)}px`;
+    console.log(indexOf(boxes));
 
     return;
   }
 }
+inputBtn.addEventListener('input', onInput);
 
-// if (event.currentTarget.value.length === inputDataLengthEl) {
-//   return event.currentTarget.classList.add('valid');
-// }
+function onInput(event) {
+  const numberBoxes = Number(event.currentTarget.value);
+  console.log(numberBoxes);
 
-// console.log(inputDataLengthEl);
-// event.currentTarget.classList.add('invalid');
-//    console.log(event.currentTarget.value.length);
+  createBtn.addEventListener('click', onCreateBtnClick);
+  const shapeEl = document.createElement('div');
 
-// const dishes = document.querySelectorAll('.dishes > li');
-// dishes.forEach((dish) => {
-//   console.log(dish.dataset.id);
-// });
-// div#boxes
-// function createBoxes(amount) {
-//   const addContainerEl = document.createElement('div');
-//     const addContainerEl = document.createElement('div');
+  function onCreateBtnClick(event) {
+    shapeEl.style.backgroundColor = getRandomHexColor();
+    shapeEl.style.width = `${getSize()}px`;
+    shapeEl.style.height = '30px';
+    console.log(shapeEl);
+    boxesContainer.appendChild(shapeEl);
 
-//   addContainerEl.classList.add('item');
-//   <div></div>;
-// }
+    console.log(boxes);
+    console.log(boxes.length);
+    inputBtn.value = '';
+  }
+}
