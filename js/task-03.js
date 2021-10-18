@@ -12,9 +12,10 @@ const images = [
     alt: 'Group of Horses Running',
   },
 ];
-
+function getRandomHexColor() {
+  return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
+}
 const imgGalleryEl = document.querySelector('ul.gallery');
-// console.log(imgGalleryEl);
 const elementsGallery = images
   .map(
     (image) =>
@@ -23,20 +24,9 @@ const elementsGallery = images
   .join('');
 
 imgGalleryEl.insertAdjacentHTML('beforeend', elementsGallery);
-// console.log(imgGalleryEl);
+
 const styleImagesEl = document.querySelectorAll('.image');
-// console.log(styleImagesEl);
-// styleImageEl.style.display = 'flexBox';
+
 styleImagesEl.forEach((styleImageEl) => {
-  //   styleImageEl.style.display = 'inline-flex';
-  //   styleImageEl.style.display = 'flexBox';
-  //   styleImageEl.style.padding = '5px';
-  //   styleImageEl.style.marging = '5px';
-  //   styleImageEl.style.borderRadius = '150px';
-  styleImageEl.style.backgroundColor = prompt(
-    'type for each picture: or tomato or green or purple',
-    'tomato',
-    'green',
-    'purple'
-  );
+  styleImageEl.style.backgroundColor = getRandomHexColor();
 });
