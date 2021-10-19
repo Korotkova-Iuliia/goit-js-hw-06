@@ -5,10 +5,13 @@ const borderInputBtnValid = document.querySelector('#validation-input');
 inputBtn.addEventListener('blur', onInputBtnBlur);
 function onInputBtnBlur(event) {
   if (event.currentTarget.value.length === inputDataLengthEl) {
-    return event.currentTarget.classList.add('valid');
+    event.currentTarget.classList.add('valid');
+    event.currentTarget.classList.remove('invalid');
+    return;
   }
   // console.log(inputDataLengthEl);
   event.currentTarget.classList.add('invalid');
+  event.currentTarget.classList.remove('valid');
   //    console.log(event.currentTarget.value.length);
 }
 
