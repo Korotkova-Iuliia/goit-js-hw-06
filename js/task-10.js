@@ -33,7 +33,7 @@ function destroyBoxes() {
   return;
 }
 
-// Right
+// У цьому коді працює лише, якщо натискати на стрілки в input
 // function getRandomHexColor() {
 //   return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
 // }
